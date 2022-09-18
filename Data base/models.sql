@@ -35,7 +35,11 @@ first_name varchar(60),
 tell varchar(11),
 date_registration date default auto
 )
-
+create table [Order](
+[user_id] int foreign key ([user_id]) references User(id),
+product_id int foreign key (product_id) references Product(id),
+count_ int ,
+)
 create table Sales (
 id int identity(1,1) primary key,
 product_id int foreign key (product_id) references Product(id),

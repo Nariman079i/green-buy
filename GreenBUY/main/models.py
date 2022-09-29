@@ -63,7 +63,5 @@ class Sale(Model):
     product_id = ForeignKey(Product, on_delete=CASCADE)
     street_id = ForeignKey(Street, on_delete=CASCADE)
 
-class LearnFieldsForModels(Model):
-    decimal_ = DecimalField(max_digits=2)
-    float_ = FloatField(max_length=300)
+
     

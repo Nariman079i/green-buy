@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    {% for p in products %}
+    <div class="product-wrapper" id="">
+        <img src="{{ p.img.url }}" alt="" width="200px" height="200px">
+        <p class="title">{{ p.title }}</p>
+        <div class="but">
+            <p class="price">{{ p.price }}P\{{ p.unit_id.title }}</p>
+            <button id="{{ p.pk }}_{{ p.title }}" class="bt">ADD+</button>
+        </div>
+        
 
+    </div>
+    {% endfor %}
 </body>
+<style>
+    .product-wrapper{
+        margin: 15px 20px;
+        
+        width: max-content;
+
+        background: #FFFFFF;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 30px
+    }
+    img{
+        padding: 20px;
+        border-radius: 50%;
+    }
+    .but{
+        display: flex;
+        padding:20px;
+    }
+    .price{
+        margin: 0;
+        display: block;
+        width: 100px;
+        height: 40px;
+
+        
+       
+        line-height: 40px;
+     
+        text-align: center;
+
+    }
+    .title{
+
+        text-align: center;
+    }
+    .bt{
+
+        width: 100px;
+        height: 40px;
+
+        background-color: #2E9144;
+        color: white;
+        border: none;
+        border-radius: 20px;
+    }
+</style>
 </html>

@@ -63,5 +63,8 @@ class Sale(Model):
     product_id = ForeignKey(Product, on_delete=CASCADE)
     street_id = ForeignKey(Street, on_delete=CASCADE)
 
-
+class Image(Model):
+    title = CharField(max_length=200)
+    img = ImageField(upload_to='img/')
+    file = FileField()
     

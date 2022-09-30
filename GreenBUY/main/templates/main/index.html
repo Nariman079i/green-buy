@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+{% if request.user.is_authenticated %}
+{{ user.username }}
+
+{% endif %}
     {% for p in products %}
     <div class="product-wrapper" id="">
         <img src="{{ p.img.url }}" alt="" width="200px" height="200px">

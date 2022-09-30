@@ -6,7 +6,7 @@ class User(Model):
     last_name = CharField('Фамилия', max_length=30, null=False)
     first_name = CharField('Имя', max_length=30, null=False)
     tell = CharField('Номер телефона', max_length=11, null=False)
-    date_registration = DateField('Дата регистрации', auto_now_add=True)
+    date_registration = DateField('Дата регистрации' , auto_now_add=True)
 
     def __str__(self):
         return str(self.first_name) +" "+ str(self.last_name)
